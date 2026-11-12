@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", system-ui, sans-serif;
+  color: #1d1d1d;
+  background: #f8f9fb;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left panel */
+.photo-panel {
+  position: relative;
+  flex: 0 0 37%;
+  background: #1f2a1c url("images/leaf.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  translate: -50% -50%;
+  color: #fff;
+}
+.odin-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  translate: -50% -50%;
+  color: #fff;
+}   
+
+.credit {
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.credit a {
+  color: #fff;
+}
+
+/* Right panel */
+.content {
+  flex: 1;
+  padding: 0 0 48px 48px;
+}
+
+.intro {
+  max-width: 680px;
+  padding: 150px 0 60px;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.intro p {
+  margin: 0 0 1.1em;
+}
+
+/* Form card */
+.form-card {
+  background: #fff;
+  padding: 24px 48px 40px 48px;
+  margin-left: -48px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.form-card h2 {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 262px);
+  column-gap: 72px;
+  row-gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.field input {
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid #e3e6ea;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #3b6fd6;
+  box-shadow: 0 0 0 1px #3b6fd6;
+}
+
+/* Red border for invalid fields */
+.field input:invalid:not(:placeholder-shown) {
+  border-color: #c62828;
+}
+
+/* Actions below the card */
+.actions {
+  padding: 36px 0 0;
+}
+
+.primary-btn {
+  padding: 14px 54px;
+  border: none;
+  border-radius: 4px;
+  background: #5b6e4b;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:hover {
+  background: #4b5d3e;
+}
+
+.actions p {
+  margin: 24px 0 0;
+  font-size: 1.1rem;
+}
+
+.login-link {
+  color: #5b6e4b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Stack everything on small screens */
+@media (max-width: 900px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .photo-panel {
+    flex: none;
+    height: 260px;
+  }
+
+  .content {
+    padding: 0 24px 40px;
+  }
+
+  .form-card {
+    margin-left: -24px;
+    padding: 24px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

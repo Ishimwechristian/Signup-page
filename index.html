@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin | Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <aside class="photo-panel">
+            <h2 class="odin">ODIN</h2>
+            <img src="images/odin-lined" alt="ODIN Logo" class="logo">
+            <p class="credit">Photo by <a href="https://unsplash.com/@haliewest">Halie West</a> on <a href="https://unsplash.com/photos/odin-logo">Unsplash</a></p>
+        </aside>
+
+    <main class="content">
+        <section class="intro">
+        <p class="first">This is not a real online service! You know you need something like this in your life to help you
+            realize your deepest dreams.<br>Sign up <em>now</em> to get started!</p>
+
+        <P>You <em>know</em> you want to</P>
+        </section>
+
+     <form class="form-card" id="signup-form">
+        <h2>Let's do this!</h2>
+
+    <div class="form-grid">
+        <div class="field">
+      <label for="first_name">FIRST NAME</label>
+      <input type="text" id="first_name" name="first_name" placeholder="Chris...">
+      </div>
+
+      <div class="field">
+      <label for="last_name">LAST NAME</label>
+      <input type="text" id="last_name" name="last_name" placeholder="Smith...">
+      </div>
+
+      <div class="field">
+      <label for="email">EMAIL</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com">
+      </div>
+
+      <div class="field">
+      <label for="phone_number">PHONE NUMBER</label>
+      <input type="tel" id="phone_number" name="phone_number" placeholder="(123) 456-7890">
+      </div>
+      <div class="field">   
+      <label for="password">PASSWORD</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" minlength="8" maxlength="24">
+      </div>
+
+      <div class="field">
+        <label for="confirm_password">CONFIRM PASSWORD</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="••••••••" minlength="8" maxlength="24">
+    </div>
+
+    </form>
+    <div class="actions">
+        <button type="submit" form="signup-form" class="primary-btn">Create Account</button>
+        <p>Already have an account? <a href="#" class="login-link">Log in</a></p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
